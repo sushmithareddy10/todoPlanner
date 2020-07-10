@@ -4,6 +4,9 @@ add.addEventListener('click',addItem);
 var remove=document.getElementById('remove');
 remove.addEventListener('click',removeItem);
 
+var pencil=document.getElementById('pencil');
+pencil.addEventListener('click',addItem);
+
 var ul=document.getElementById('list');
 
 
