@@ -1,0 +1,89 @@
+body{
+    background-image: linear-gradient(#FFD4B3,#FF005C);
+}
+#input{
+    width:60%;
+    height: 30px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-weight: solid;
+    font-size: 250%;
+
+}
+
+button{
+    width: 200px;
+}
+#add{
+    margin-top: 10px;
+    border: 3px  #0000FF;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #87CEEB;
+    padding: 1px;
+}
+#remove{
+    margin-top: 10px;
+    border: 3px #FF0000;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #FA8072;
+    padding: 1px;
+    
+}
+#pencil{
+    width:30px;
+    height: 25px;
+    padding: 3px auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-left: 3px;
+    
+}
+
+#container ul li{
+    list-style-type: none;
+    text-align: start;
+    list-style-position: outside;
+    border: 3px solid gray;
+    width: 60%;
+    font-size: larger;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 6px;
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#container{
+    text-align: center;
+    padding: 5px;
+    margin: 30px auto;
+    width: 40%;
+    height: 100vh;
+    border-radius: 10px;
+   
+    
+}
+
+.card-header{
+    font-weight: bold;
+    font-size: medium;
+}
+#container #check{
+    margin-right: 10px;
+}
+
+#check:checked + label{
+    opacity: 0.5;
+    text-decoration: line-through;
+    color: rgb(0,0,0,.5);
+}
