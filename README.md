@@ -1,13 +1,11 @@
 # todoList
 It is a simple TODO Planner where you can plan your tasks for the day.
 
-It contains mainly to Buttons
->Add Todo: 
-    If you want to add your tasks for the day, type the todo in the text boa and press the Add Todo button.
-    
->Remove done Todo:
-    The tasks which are done for the day can be checked and can be removed by clicking on the Remove done Todo button.
-    
+- Can add task by pressing enter or by clicking on check icon
+- Done todos can be striked out by clicking on the task
+- To undo the strike click again on the task
+- Can delete the task individually by clicking on the cross mark
+
 My First JavaScript Project.
 Try it!!!
 Link: https://sushmithareddy10.github.io/todoPlanner/

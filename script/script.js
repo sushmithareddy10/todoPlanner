@@ -1,50 +1,68 @@
-var add=document.getElementById('add');
-add.addEventListener('click',addItem);
-
-var remove=document.getElementById('remove');
-remove.addEventListener('click',removeItem);
+// var add=document.getElementById('add');
+// add.addEventListener('click',addItem);
+var input=document.getElementById('input');
+input.addEventListener('keypress',addKey);
 
 var pencil=document.getElementById('pencil');
 pencil.addEventListener('click',addItem);
 
+var remove=document.getElementById('remove');
+remove.addEventListener('click',removeItem);
+
 var ul=document.getElementById('list');
+
+function addKey(event){
+    if(event.keyCode === 13)
+    {
+        addItem();
+    }
+
+}
 
 
 
 function addItem(){
-    var input=document.getElementById('input').value;
+    var text=document.getElementById('input').value;
     var ul=document.getElementById('list');
-    var textnode=document.createTextNode(input);
-    if(input==='')
+    var textnode=document.createTextNode(text);
+    if(text==='')
     {
-        // var para=document.createElement('p')
-        // para.textContent="Enter your TODO!!";
-        // document.querySelector('input').after(para);
         return false;
     }
     else{
         var li=document.createElement('li');
-        var checkbox=document.createElement('input');
-        checkbox.type='checkbox';
-        checkbox.setAttribute('id','check');
+        // var checkbox=document.createElement('input');
+        // checkbox.type='checkbox';
+        // checkbox.setAttribute('id','check');
         var label=document.createElement('label');
-        label.setAttribute('for','item');
+        label.setAttribute('id','item');
+        label.addEventListener('click',function(){
+            label.classList.toggle('stroked');
+            
+        })
+
+        var btn= document.createElement('button');
+        btn.setAttribute('id','cross');
+        btn.appendChild(document.createTextNode('X'));
+        btn.addEventListener('click',function(){
+            li.remove();
+        })
 
         ul.appendChild(label);
-        li.appendChild(checkbox);
-        label.appendChild(textnode);
+        // li.appendChild(checkbox);
         li.appendChild(label)
+        label.appendChild(textnode);
+        li.appendChild(btn);
         ul.insertBefore(li,ul.childNodes[0]);
         document.getElementById('input').value="";
     }
 
 }
 
-
 function removeItem(){
     li=ul.children;
     for (let index = 0; index < li.length; index++) {
-        while(li[index] && li[index].children[0].checked)
+        while(li[index] && (li[index].children[0].style.textDecoration="line-through"))
         {
             ul.removeChild(li[index]);
         }
