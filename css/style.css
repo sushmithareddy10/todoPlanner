@@ -35,10 +35,10 @@ body{
 
 }
 #cross{
-    width:30px;
+    width:8%;
     float: right;
-    padding-top: 3px;
-    border-radius: 15px;
+    padding-top: 1px;
+    border-radius: 20px;
     background-color: goldenrod;
 }
 /* .stroked{
