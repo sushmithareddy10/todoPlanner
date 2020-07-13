@@ -34,12 +34,11 @@ body{
     background-color: yellow;
 
 }
-.cross{
+#cross{
     width:8%;
     float: right;
     padding: 1px 1px 1px 1px;
     border-radius: 20px;
-    background-color: white;
 }
 /* .stroked{
     text-decoration: line-through;

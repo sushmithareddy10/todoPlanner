@@ -41,9 +41,9 @@ function addItem(){
             checkbox.classList.toggle('checked');
         })
 
-        var btn= document.createElement('button');
-        btn.setAttribute('class','cross');
-        btn.appendChild(document.createTextNode('X'));
+        var btn= document.createElement('div');
+        btn.setAttribute('id','cross');
+        btn.innerHTML='<i class="fa fa-times" aria-hidden="true"></i>';
         btn.addEventListener('click',function(){
             li.remove();
         })
