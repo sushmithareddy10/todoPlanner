@@ -1,32 +1,21 @@
+.container{
+    margin-top: 50px;
+    text-align: center;
+
+}
+h4{
+    font-weight: bold;
+    font-size: small;
+}
 body{
     background-image: linear-gradient(#FFD4B3,#FF005C);
+    height: 100vh;
 }
 #input{
     width:60%;
     height: 30px;
     border: 3px solid #000000;
     border-radius: 5px;
-}
-h1{
-    text-align: center;
-    margin-top: 50px;
-    font-weight: solid;
-    font-size: 250%;
-
-}
-
-button{
-    width: 200px;
-}
-#remove{
-    margin-top: 10px;
-    border: 3px #FF0000;
-    border-radius: 5px;
-    font-size: medium;
-    font-weight: bold;
-    background-color: #FA8072;
-    padding: 1px;
-    
 }
 #pencil{
     width:30px;
@@ -37,41 +26,14 @@ button{
     margin-left: 3px;
     
 }
-
-#container ul li{
-    list-style-type: none;
-    text-align: start;
-    list-style-position: outside;
-    border: 3px solid gray;
-    /* width: 100%; */
-    font-size: larger;
+.card-header{
     font-weight: bold;
-    margin: 10px auto;
-    padding: 6px;
-    border-radius: 15px;
-    
+    font-size: x-large;
 }
-
-#container{
-    text-align: center;
-    padding: 5px;
-    margin: 30px auto;
-    width: 40%;
-    height: 100vh;
-    border-radius: 10px;
-   
-    
-}
-#container #pencil:hover{
+.container #pencil:hover{
     background-color: yellow;
 
 }
-
-.card-header{
-    font-weight: bold;
-    font-size: medium;
-}
-
 #cross{
     width:30px;
     float: right;
@@ -79,8 +41,37 @@ button{
     border-radius: 15px;
     background-color: goldenrod;
 }
+/* .stroked{
+    text-decoration: line-through;
+    opacity: 0.5;
+    
+} */
 
-.stroked{
+#remove{
+    margin-top: 10px;
+    border: 3px #FF0000;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.container ul li{
+    list-style-type: none;
+    text-align: start;
+    list-style-position: outside;
+    border: 3px solid gray;
+    font-size: larger;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 6px;
+    border-radius: 15px;
+    
+}
+#check{
+    width: 30px;
+    margin: 2px auto;
+}
+#check:checked+label{
     text-decoration: line-through;
     opacity: 0.5;
 }

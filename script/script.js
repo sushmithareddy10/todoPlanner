@@ -19,8 +19,6 @@ function addKey(event){
 
 }
 
-
-
 function addItem(){
     var text=document.getElementById('input').value;
     var ul=document.getElementById('list');
@@ -31,14 +29,16 @@ function addItem(){
     }
     else{
         var li=document.createElement('li');
-        // var checkbox=document.createElement('input');
-        // checkbox.type='checkbox';
-        // checkbox.setAttribute('id','check');
+        var checkbox=document.createElement('input');
+        checkbox.type='checkbox';
+        checkbox.setAttribute('id','check');
+
+
         var label=document.createElement('label');
         label.setAttribute('id','item');
         label.addEventListener('click',function(){
             label.classList.toggle('stroked');
-            
+            checkbox.classList.toggle('checked');
         })
 
         var btn= document.createElement('button');
@@ -49,7 +49,7 @@ function addItem(){
         })
 
         ul.appendChild(label);
-        // li.appendChild(checkbox);
+        li.appendChild(checkbox);
         li.appendChild(label)
         label.appendChild(textnode);
         li.appendChild(btn);
@@ -62,7 +62,7 @@ function addItem(){
 function removeItem(){
     li=ul.children;
     for (let index = 0; index < li.length; index++) {
-        while(li[index] && (li[index].children[0].style.textDecoration="line-through"))
+        while(li[index] && (li[index].children[0].checked))
         {
             ul.removeChild(li[index]);
         }
