@@ -42,7 +42,7 @@ function addItem(){
         })
 
         var btn= document.createElement('button');
-        btn.setAttribute('id','cross');
+        btn.setAttribute('class','cross');
         btn.appendChild(document.createTextNode('X'));
         btn.addEventListener('click',function(){
             li.remove();
